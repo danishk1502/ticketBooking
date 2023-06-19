@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+</head>
+
+<body class="bg-light">
+    <!-- Navbar -->
+    <div class="bg-light sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                <!-- Container wrapper -->
+                <div class="container-fluid">
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15"
+                                alt="MDB Logo" loading="lazy" />
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalThird"
+                                    onclick="showTickets()"><i class="fa fa-film" aria-hidden="true"
+                                        style="font-size: 20px;"></i> MyBookings</a>
+                            </li>
+                        </ul>
+                        <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+
+                    <!-- Right elements -->
+                    <div class="d-flex align-items-center">
+                        <!-- Icon -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item" id="button-show">
+
+                                <!--###############################################################********modal section ******###################################################################3-->
+                                <!-- Button trigger modal -->
+                                <span id="btnlogout"></span>
+
+                                <button type="button" class="btn btn-primary" id="signup_Link" data-bs-toggle="modal"
+                                    data-bs-target="#modalFirst" aria-labelledby="staticBackdropLabel">
+                                    Sign Up
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fixed" id="modalFirst" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content fixed">
+                                            <div class="modal-body">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close" style="background-color: white;"></button>
+                                                <div class="myform bg-dark">
+                                                    <h1 class="text-center">Sign Up </h1>
+                                                    <form onsubmit="event.preventDefault()">
+                                                        <div class="my-4">
+                                                            <label for="exampleInputEmail1" class="form-label">Email
+                                                                address </label>
+                                                            <input type="email" class="form-control" id="email"
+                                                                aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="my-4">
+                                                            <label for="exampleInputEmail1" class="form-label">
+                                                                Name </label>
+                                                            <input type="text" class="form-control" id="name"
+                                                                aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="my-4">
+                                                            <label for="exampleInputEmail1" class="form-label">
+                                                                User Name </label>
+                                                            <input type="text" class="form-control" id="username"
+                                                                aria-describedby="emailHelp">
+                                                        </div>
+                                                        <div class="my-4">
+                                                            <label for="exampleInputPassword1"
+                                                                class="form-label">Password </label>
+                                                            <input type="password" class="form-control" id="password">
+                                                        </div>
+                                                        <button type="submit" class="btn btn-light mt-3"
+                                                            data-bs-dismiss="modal" onclick="userValidData()">Sign
+                                                            up</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Right elements -->
+                </div>
+                <!-- Container wrapper -->
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <section>
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/624649.jpg" class="d-block w-100" alt="img1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/peaky.jpg" class="d-block w-100" alt="img">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/724132.jpg" class="d-block w-100" alt="img2">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+
+
+    <div class=" w-75 mx-auto owlCrodiv">
+        <section>
+            <div class="owl-carousel owl-theme mt-5">
+                <div class="item "><img src="images/Xmen-Origins-Wolverine-high-resolution-wallpaper-320x480.jpg"
+                        alt="">
+                </div>
+                <div class="item">
+                    <img src="images/poster10.jpg" alt="img" class="rounded">
+                </div>
+                <div class="item">
+                    <img src="images/poster11.webp" alt="img" class="rounded">
+                </div>
+                <div class="item">
+                    <img src="images/poster11.jpg" alt="img" class="rounded">
+                </div>
+                <div class="item">
+                    <img src="images/poster1.jpg" alt="img" class="rounded">
+                </div>
+                <div class="item">
+                    <img src="images/poster2.png" alt="img" class="rounded">
+                </div>
+                <div class="item">
+                    <img src="images/poster3.webp" alt="img" class="rounded">
+                </div>
+                <div class="item">
+                    <img src="images/poster4.jpg" alt="img" class="rounded">
+                </div>
+                <div class="item">
+                    <img src="images/poster6.jpg" alt="img" class="rounded">
+                </div>
+                <div class="item">
+                    <img src="images/peaky7.webp" alt="img" class="rounded">
+                </div>
+                <div class="item">
+                    <img src="images/poster8.jpg" alt="img" class="rounded">
+                </div>
+                <div class="item">
+                    <img src="images/poster9.jpg" alt="img" class="rounded">
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- button                       90700000007865789076543567890-9876543567890-->
+    <div class="container row mx-auto mt-5">
+        <div class="d-grid gap-2 col-3 mx-auto mt-2">
+            <button class="btn btn-primary" style="border-radius: 50px;" type="button">Hollywood</button>
+        </div>
+        <div class="d-grid gap-2 col-3 mx-auto mt-2">
+            <button class="btn btn-danger " style="border-radius: 50px;" type="button">Bollywood</button>
+        </div>
+        <div class="d-grid gap-2 col-3 mx-auto mt-2">
+            <button class="btn btn-success" style="border-radius: 50px;" type="button">South</button>
+        </div>
+        <div class="d-grid gap-2 col-3 mx-auto mt-2">
+            <button class="btn btn-warning " style="border-radius: 50px;" type="button">Punjabi</button>
+        </div>
+    </div>
+    <div class="container row mx-auto mt-4" style=" width:800px;">
+        <div class="d-grid gap-2 col-4 mx-auto p-2">
+            <button class="btn btn-info" style="border-radius: 50px;" type="button">Latest movies</button>
+        </div>
+        <div class="d-grid gap-2 col-4 mx-auto p-2">
+            <button class="btn btn-secondary" style="border-radius: 50px;" type="button">Upcoming</button>
+        </div>
+        <div class="d-grid gap-2 col-4 mx-auto p-2">
+            <button class="btn btn-danger " style="border-radius: 50px;" type="button">Early 90's</button>
+        </div>
+    </div>
+
+    <div class="container row mx-auto mt-4" style=" width:500px;">
+        <div class="d-grid gap-2 col-12 mx-auto p-2">
+            <button class="btn btn-dark " style="border-radius: 50px;" data-bs-toggle="modal"
+                data-bs-target="#modalThird" onclick="showTickets()">View Bookings</button>
+        </div>
+    </div>
+
+
+    <div id="modalSecond" class="modal container-fluid">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content fixed bg-dark" id="detailType">
+
+            </div>
+        </div>
+    </div>
+
+    <!--movies list views-->
+    <!-- Gallery -->
+    <div class="container">
+        <div class="row my-5" id="movie_show">
+
+
+        </div>
+    </div>
+    <div class="thirdmodalHere">
+        <div id="modalThird" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true" class="modal container-fluid">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content bg-dark" id="mybookinModal" style="overflow-y: scroll;">
+                    <div class="modal-header">
+                        <h1 class="modal-title m-3">My Bookings</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="row" id="myBookingData">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="modalClose()"
+                            data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script/jquery.min.js"></script>
+    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/owl.carousel.min.js"></script>
+    <script src="script/owl.carousel.js"></script>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
